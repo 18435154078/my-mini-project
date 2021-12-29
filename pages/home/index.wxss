@@ -1,0 +1,33 @@
+.home .home-swiper {
+  width: 100%;
+  height: 340rpx;
+}
+.home .home-swiper .home-swiper-item navigator image {
+  width: 100%;
+}
+.home .home-nav-list {
+  width: 100%;
+  display: flex;
+  background: #fff;
+  padding: 40rpx;
+  justify-content: space-between;
+}
+.home .home-nav-list image {
+  width: 130rpx;
+}
+.home .home-floor-list {
+  margin-top: 20rpx;
+}
+.home .home-floor-list .home-floor-item {
+  margin-top: 20rpx;
+}
+.home .home-floor-list .home-floor-item .home-floor-title {
+  width: 100%;
+}
+.home .home-floor-list .home-floor-item .home-floor-content .home-floor-content-nav {
+  width: 33.3%;
+  float: left;
+}
+.home .home-floor-list .home-floor-item .home-floor-content .home-floor-content-nav .home-floor-content-img {
+  width: 100%;
+}

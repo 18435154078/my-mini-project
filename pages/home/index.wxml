@@ -1,0 +1,39 @@
+<view class="home">
+    <!-- 搜索按钮 -->
+    <search-btn />
+
+    <!-- 首页轮播 -->
+    <swiper class="home-swiper" autoplay circular>
+        <swiper-item wx:for="{{ swiperList }}" class="home-swiper-item" wx:key="goods_id">
+            <navigator class="" target="" url="{{ item.navigator_url }}" hover-class="navigator-hover" open-type="navigate">
+                <image class="" src="{{ item.image_src}}" mode="widthFix" />
+            </navigator>
+        </swiper-item>
+    </swiper>
+
+    <!-- 首页导航标签 -->
+    <view class="home-nav-list">
+        <image class="home-nav-item" mode="widthFix" wx:for="{{ navList }}" wx:key="name" src="{{ item.image_src }}"></image>
+    </view>
+
+    <!-- 首页分类 -->
+    <view class="home-floor-list">
+        <view class="home-floor-item" wx:for="{{ floorList }}" wx:key="name">
+            <image class="home-floor-title" src="{{ item.floor_title.image_src }}" mode="widthFix" />
+            <view class="home-floor-content">
+                <navigator class="home-floor-content-nav"
+                    wx:for="{{ item.product_list }}"
+                    wx:for-item="item1"
+                    wx:key="name"
+                    url="{{ item1.navigator_url }}"
+                    hover-class="navigator-hover"
+                    open-type="navigate"
+                >
+                    <image class="home-floor-content-img" src="{{ item1.image_src }}" mode="widthFix" lazy-load/>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</view>
+  
+  

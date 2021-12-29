@@ -1,0 +1,50 @@
+{
+  "pages":[
+    "pages/home/index",
+    "pages/category/index",
+    "pages/shopcar/index",
+    "pages/my/index",
+    "pages/index/index",
+    "pages/search/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#F8554D",
+    "navigationBarTitleText": "我的购物网站",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#F5F5F5"
+  },
+  "tabBar": {
+    "color": "#8a8a8a",
+    "selectedColor": "#FC011A",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "/icon/home.png",
+        "selectedIconPath": "/icon/home_avtive.png"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "text": "分类",
+        "iconPath": "/icon/caidan.png",
+        "selectedIconPath": "/icon/caidan_avtive.png"
+      },
+      {
+        "pagePath": "pages/shopcar/index",
+        "text": "购物车",
+        "iconPath": "/icon/gouwuche.png",
+        "selectedIconPath": "/icon/gouwuche_avtive.png"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "text": "我的",
+        "iconPath": "/icon/wode.png",
+        "selectedIconPath": "/icon/wode_avtive.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

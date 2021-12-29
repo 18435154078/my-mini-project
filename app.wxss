@@ -1,0 +1,17 @@
+
+
+/* 初始化组件样式 */
+page, view, text, swiper, swiper-item, image, navigator {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 主体颜色
+通过css变量来实现主体颜色
+*/
+page {
+    font-size: 28rpx;
+    --color: #F8554D;
+    background: #F2F4F1;
+}
