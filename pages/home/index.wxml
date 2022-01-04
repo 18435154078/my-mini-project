@@ -29,11 +29,9 @@
                     hover-class="navigator-hover"
                     open-type="navigate"
                 >
-                    <image class="home-floor-content-img" src="{{ item1.image_src }}" mode="widthFix" lazy-load/>
+                    <image class="home-floor-content-img" src="{{ item1.image_src }}" mode="" lazy-load/>
                 </navigator>
             </view>
         </view>
     </view>
 </view>
-  
-  

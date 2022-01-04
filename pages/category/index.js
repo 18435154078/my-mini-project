@@ -1,66 +1,47 @@
-// pages/category/index.js
+import { request } from '../../utils/request'
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    categoryList: [],
+    categoryList_left: [],
+    current_categoryList: {},
+    current_active: 0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getCategoryList()
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  async getCategoryList() {
+    const { data } = await request({
+      url: 'https://api-hmugo-web.itheima.net/api/public/v1/categories'
+    })
+    if(data.meta.status === 200) {
+      const { message } = data
+      let cat_level = []
+      message.forEach(item => {
+        cat_level.push({
+          cat_deleted: item.cat_deleted,
+          cat_icon: item.cat_icon,
+          cat_id: item.cat_id,
+          cat_level: item.cat_level,
+          cat_name: item.cat_name,
+          cat_pid: item.cat_pid
+        })
+      })
+      this.setData({
+        categoryList: data.message,
+        categoryList_left: cat_level,
+        current_categoryList: data.message[0]
+      })
+    }
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  handleClick(data) {
+    this.setData({
+      current_active: data.currentTarget.dataset.index
+    })
   }
 })

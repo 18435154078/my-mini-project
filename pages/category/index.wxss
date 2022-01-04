@@ -1,1 +1,60 @@
-/* pages/category/index.wxss */
+page {
+  height: 100vh;
+}
+page .category {
+  height: 100vh;
+}
+page .category .category-content {
+  width: 100%;
+  height: calc(100vh - 108rpx);
+  display: flex;
+}
+page .category .category-content .category-left-wrap {
+  width: 110%;
+  height: 100%;
+  flex: 2;
+  overflow: hidden;
+}
+page .category .category-content .category-left-wrap .category-left {
+  height: 100%;
+  width: 107%;
+  flex: 2;
+}
+page .category .category-content .category-left-wrap .category-left .cat_level-0 {
+  text-align: center;
+  padding: 30rpx;
+  font-size: 30rpx;
+  box-sizing: border-box;
+  background: #eee;
+}
+page .category .category-content .category-left-wrap .category-left .active {
+  background: #fff;
+  position: relative;
+}
+page .category .category-content .category-left-wrap .category-left .active::before {
+  content: "";
+  width: 10rpx;
+  height: 50rpx;
+  position: absolute;
+  background: red;
+  left: 0;
+  top: 20rpx;
+}
+page .category .category-content .category-right-wrap {
+  flex: 6;
+  background: #fff;
+  height: 100%;
+}
+page .category .category-content .category-right-wrap .category-right {
+  height: 100%;
+}
+page .category .category-content .category-right-wrap .category-right .view {
+  width: 100%;
+  display: flex;
+}
+page .category .category-content .category-right-wrap .category-right .view .category-right-containt {
+  width: 33.3%;
+}
+page .category .category-content .category-right-wrap .category-right .view .category-right-containt .category-right-content .navigator .cat_icon {
+  width: 100rpx;
+}

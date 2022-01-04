@@ -1,2 +1,52 @@
-<!--pages/category/index.wxml-->
-<text>pages/category/index.wxml</text>
+<view class="category">
+    <!-- 搜索 -->
+    <search-btn />
+
+    <!-- 分类 -->
+    <!-- 一级分类 左 -> 右 -->
+    <view class="category-content">
+        <view class="category-left-wrap">
+            <scroll-view class="category-left" scroll-y>
+                <view
+                    class="cat_level-0 {{ index == current_active ? 'active' : ''}}"
+                    wx:for="{{ categoryList_left }}"
+                    wx:key="cat_id"
+                    bindtap="handleClick"
+                    data-index="{{index}}"
+                >
+                    {{ item.cat_name }}
+                </view>
+            </scroll-view>
+         </view>
+        <!-- 二级分类 上 -> 下 -->
+        <view class="category-right-wrap">
+            <scroll-view class="category-right" scroll-y>
+                <view>
+                    {{ current_categoryList.cat_name }}
+                </view>
+                <view class=".view">
+                    <view
+                        class="category-right-containt"
+                        wx:for="{{ current_categoryList.children }}"
+                        wx:key="cat_id"
+                    >
+                        <view class="category-right-title">
+                            {{ item.cat_name }}
+                        </view>
+                        <view class="category-right-content"
+                            wx:for="{{ item.children }}"
+                            wx:for-item="item1"
+                            wx:key="cat_id"
+                        >
+                            <navigator class="" url="" open-type="navigate">
+                                <image class="cat_icon" src="{{ item1.cat_icon }}" mode=""/>
+                                <text class="cat_name">{{ item1.cat_name }}</text>
+                            </navigator>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </view>
+    </view>
+</view>
+  
