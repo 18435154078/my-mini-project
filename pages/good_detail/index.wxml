@@ -1,0 +1,56 @@
+<view class="good_detail">
+    <swiper wx:if="{{goodDetail.pics.length > 0}}" class="swiper-list" indicator-dots="false" autoplay interval="2000" duration="500" circular="false">
+        <swiper-item class="" wx:for="{{goodDetail.pics}}" wx:key="pics_id" bindtap="showPreviewImage" data-index="{{ index }}">
+            <image class="" src="{{ item.pics_big_url }}" mode="widthFix" lazy-load />
+        </swiper-item>
+          
+    </swiper>
+    <swiper wx:else class="swiper-list" indicator-dots="false" autoplay interval="2000" duration="500" circular="false">
+        <swiper-item>
+            <image class="" src="https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg" mode="widthFix" lazy-load />
+        </swiper-item>
+          
+    </swiper>
+    <view class="good-price">￥{{ goodDetail.goods_price }}</view>
+    <view class="good-name">
+        <text class="" selectable="false" space="false" decode="false">{{ goodDetail.goods_name }}</text>
+        <view bindtap="handleLike">
+            <image wx:if="{{ isLike }}" src="/icon/like.png" mode="widthFix" lazy-load="false" />
+            <image wx:else class="" src="/icon/dontlike.png" mode="widthFix" lazy-load="false" />
+            <text class="" selectable="false" space="false" decode="false">收藏</text>
+        </view>
+    </view>
+    <view class="goods-introduce">
+        <text>商品介绍</text>
+        <rich-text nodes="{{ goodDetail.goods_introduce }}">
+        </rich-text>
+    </view>
+    <view class="bottom-bar">
+        <view class="kefu" hover-class="active">
+            <text class="iconfont icon-kefu"></text>
+            <text class="" selectable="false" space="false" decode="false">客服</text>
+            <button class="btn" open-type="contact" ></button>
+        </view>
+        <view class="share" hover-class="active">
+            <text class="iconfont icon-fenxiang"></text>
+            <text class="" selectable="false" space="false" decode="false">分享</text>
+            <button class="btn" open-type="share" ></button>
+        </view>
+        <view class="shopcar" hover-class="active">
+            <text class="iconfont icon-gouwuche"></text>
+            <text class="" selectable="false" space="false" decode="false">购物车</text>
+            <navigator class="btn" target="" url="../shopcar/index" open-type="switchTab"></navigator>
+        </view>
+        <view class="add-shopcar" bindtap="addShopCatr">
+            <text class="" selectable="false" space="false" decode="false">加入购物车</text>
+        </view>
+        <view class="shop">
+            <text class="" selectable="false" space="false" decode="false">立即购买</text>
+        </view>
+        <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
+            
+        </navigator>
+          
+    </view>
+</view>
+  

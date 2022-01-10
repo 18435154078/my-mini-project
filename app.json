@@ -5,7 +5,9 @@
     "pages/shopcar/index",
     "pages/my/index",
     "pages/index/index",
-    "pages/search/index"
+    "pages/search/index",
+    "pages/good_list/index",
+    "pages/good_detail/index"
   ],
   "window":{
     "backgroundTextStyle":"dark",

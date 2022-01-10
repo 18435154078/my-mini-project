@@ -1,0 +1,25 @@
+<view class="good-list-wrap">
+    <search-btn />
+    <scroll-view class="good-list" scroll-y enhanced show-scrollbar="false">
+        <navigator
+            class="good-item"
+            wx:for="{{ goodList }}"
+            wx:key="goods_id"
+            url="../good_detail/index?id={{ item.goods_id }}"
+            open-type="navigate"
+        >
+            <image class="good-item-cover" src="{{ item.goods_small_logo || 'https://ww1.sinaimg.cn/large/007rAy9hgy1g24by9t530j30i20i2glm.jpg' }}" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+            <view class="good-name">{{ item.goods_name }}</view>
+            <view class="good-price">￥{{ item.goods_price }}</view>
+            <view class="good-number">库存{{ item.goods_number }}件</view>
+        </navigator>
+          
+    </scroll-view>
+    <view class="loading" wx:if="{{ isDownLoad }}">
+        正在加载中...
+    </view>
+    <view class="has-no" wx:else>
+        没有更多了~
+    </view>
+</view>
+  

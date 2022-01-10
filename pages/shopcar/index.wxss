@@ -1,1 +1,3 @@
-/* pages/shopcar/index.wxss */
+.shopCar .addAddress {
+  border: 2rpx solid #ccc;
+}

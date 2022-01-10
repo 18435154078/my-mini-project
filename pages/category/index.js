@@ -16,7 +16,7 @@ Page({
 
   async getCategoryList() {
     const { data } = await request({
-      url: 'https://api-hmugo-web.itheima.net/api/public/v1/categories'
+      url: '/categories'
     })
     if(data.meta.status === 200) {
       const { message } = data
@@ -40,8 +40,10 @@ Page({
   },
 
   handleClick(data) {
+    const current = data.currentTarget.dataset.index
     this.setData({
-      current_active: data.currentTarget.dataset.index
+      current_active: current,
+      current_categoryList: this.data.categoryList[current]
     })
   }
 })

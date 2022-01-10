@@ -1,2 +1,6 @@
-<!--pages/shopcar/index.wxml-->
-<text>pages/shopcar/index.wxml</text>
+<view class="shopCar">
+    <button class="addAddress" bindtap="handleChooseAddress" size="default" type="default">
+        添加收货地址
+    </button>
+</view>
+  

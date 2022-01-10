@@ -23,7 +23,7 @@ Page({
   // 获取轮播图
   async getSwiperList() {
     const { data } = await request({
-      url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/swiperdata'
+      url: '/home/swiperdata'
     })
     if(data.meta.status === 200) {
       this.setData({
@@ -35,7 +35,7 @@ Page({
   // 获取首页导航
   async getNavList() {
     const { data } = await request({
-      url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/catitems'
+      url: '/home/catitems'
     })
     if(data.meta.status === 200) {
       this.setData({
@@ -47,11 +47,17 @@ Page({
   // 获取分类列表
   async getFloorList() {
     const { data } = await request({
-      url: 'https://api-hmugo-web.itheima.net/api/public/v1/home/floordata'
+      url: '/home/floordata'
+    })
+    const { message } = data
+    message.forEach(item => {
+      item.product_list.forEach(item1 => {
+        item1.name = item1.navigator_url.split('=')[1]
+      })
     })
     if(data.meta.status === 200) {
       this.setData({
-        floorList: data.message
+        floorList: message
       })
     }
   }

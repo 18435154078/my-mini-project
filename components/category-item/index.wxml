@@ -1,0 +1,31 @@
+<view class="category-item">
+    <scroll-view class="category-right" scroll-y>
+        <view class="view">
+            <view
+                class="category-right-containt"
+                wx:for="{{ categoryList.children }}"
+                wx:key="cat_id"
+            >
+                <view class="category-right-title">
+                    {{ item.cat_name }}
+                </view>
+                <view class="category-right-list">
+                    <navigator
+                        class=""
+                        wx:for="{{ item.children }}"
+                        wx:for-item="item1"
+                        wx:key="cat_id"
+                        url="{{ '../../pages/good_list/index?query=' + item1.cat_name }}"
+                        open-type="navigate"
+                    >
+                        <view class="img-wrap">
+                            <image class="cat_icon" src="{{ item1.cat_icon }}" mode="aspectFit"/>
+                        </view>
+                        <text class="cat_name">{{ item1.cat_name }}</text>
+                    </navigator>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>
+  

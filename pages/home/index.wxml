@@ -3,9 +3,9 @@
     <search-btn />
 
     <!-- 首页轮播 -->
-    <swiper class="home-swiper" autoplay circular>
+    <swiper class="home-swiper" autoplay circular indicator-dots="false">
         <swiper-item wx:for="{{ swiperList }}" class="home-swiper-item" wx:key="goods_id">
-            <navigator class="" target="" url="{{ item.navigator_url }}" hover-class="navigator-hover" open-type="navigate">
+            <navigator class="" target="" url="{{ '../good_detail/index?id=' + item.goods_id }}" hover-class="navigator-hover" open-type="navigate">
                 <image class="" src="{{ item.image_src}}" mode="widthFix" />
             </navigator>
         </swiper-item>
@@ -25,10 +25,10 @@
                     wx:for="{{ item.product_list }}"
                     wx:for-item="item1"
                     wx:key="name"
-                    url="{{ item1.navigator_url }}"
+                    url="{{ '../good_list/index?query=' + item1.name }}"
                     hover-class="navigator-hover"
-                    open-type="navigate"
-                >
+                    open-type="{{ item1.open_type }}"
+                >   
                     <image class="home-floor-content-img" src="{{ item1.image_src }}" mode="" lazy-load/>
                 </navigator>
             </view>

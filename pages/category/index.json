@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "search-btn": "/components/searchBtn/index"
+    "search-btn": "/components/searchBtn/index",
+    "category-item": "/components/category-item/index"
   },
   "enablePullDownRefresh": false,
   "navigationBarTitleText": "商品分类"

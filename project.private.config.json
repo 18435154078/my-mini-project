@@ -1,4 +1,5 @@
 {
+  "setting": {},
   "condition": {
     "plugin": {
       "list": []
@@ -13,7 +14,7 @@
       "list": [
         {
           "name": "",
-          "pathName": "pages/category/index",
+          "pathName": "pages/shopcar/index",
           "query": "",
           "scene": null
         }
