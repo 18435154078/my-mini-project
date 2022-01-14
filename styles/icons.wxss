@@ -1,8 +1,8 @@
 @font-face {
   font-family: "iconfont"; /* Project id 3123870 */
-  src: url('//at.alicdn.com/t/font_3123870_h73czhqeoh.woff2?t=1641525478833') format('woff2'),
-       url('//at.alicdn.com/t/font_3123870_h73czhqeoh.woff?t=1641525478833') format('woff'),
-       url('//at.alicdn.com/t/font_3123870_h73czhqeoh.ttf?t=1641525478833') format('truetype');
+  src: url('//at.alicdn.com/t/font_3123870_h7y5w4o5pj5.woff2?t=1641972979434') format('woff2'),
+       url('//at.alicdn.com/t/font_3123870_h7y5w4o5pj5.woff?t=1641972979434') format('woff'),
+       url('//at.alicdn.com/t/font_3123870_h7y5w4o5pj5.ttf?t=1641972979434') format('truetype');
 }
 
 .iconfont {
@@ -11,6 +11,34 @@
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-icon3:before {
+  content: "\e66a";
+}
+
+.icon-quanbudingdan:before {
+  content: "\e600";
+}
+
+.icon-tuikuan:before {
+  content: "\e75a";
+}
+
+.icon-daifukuan:before {
+  content: "\e633";
+}
+
+.icon-jiazaizhong:before {
+  content: "\e619";
+}
+
+.icon-shanchu:before {
+  content: "\e603";
+}
+
+.icon-fanhui:before {
+  content: "\e602";
 }
 
 .icon-fenxiang:before {

@@ -1,0 +1,4 @@
+<view bindtap="handleClick">
+    关于我们
+</view>
+  

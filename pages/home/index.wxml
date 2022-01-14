@@ -28,6 +28,7 @@
                     url="{{ '../good_list/index?query=' + item1.name }}"
                     hover-class="navigator-hover"
                     open-type="{{ item1.open_type }}"
+                    hover-class="none"
                 >   
                     <image class="home-floor-content-img" src="{{ item1.image_src }}" mode="" lazy-load/>
                 </navigator>

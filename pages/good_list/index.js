@@ -68,7 +68,7 @@ Page({
     })
     this.setData({
       params: {
-        query: '',
+        query: this.data.params.query,
         cid: '',
         pagenum: 1,
         pagesize: 10

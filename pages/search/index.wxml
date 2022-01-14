@@ -1,1 +1,41 @@
-搜索页面
+<view class="search">
+  <view class="search-header">
+  <!--
+      <text class="iconfont icon-fanhui" bindtap="back"></text>
+  -->
+      <input
+        placeholder="请输入"
+        value="{{ searchText }}"
+        confirm-type="send"
+        bindinput="handleSearchText"
+        bindconfirm="handleComfirm"
+      ></input>
+      <view class="search-btn" bindtap="handleSearchBtn">搜索</view>
+  </view>
+  <scroll-view scroll-y class="suggeste-list" wx:if="{{ searchText }}">
+    <view
+      class="suggeste-item"
+      wx:for="{{ suggesteList }}"
+      wx:key="goods_id"
+      bindtap="handleSuggeste"
+      data-name="{{ item.goods_name }}"
+    >{{ item.goods_name }}</view>
+  </scroll-view>
+      
+  <view class="search-history" wx:else>
+    <view class="search-title" wx:if="{{ historyList.length > 0 }}">
+      <text>搜索历史</text>
+      <text class="iconfont icon-shanchu" bindtap="clearHistory"></text>
+    </view>
+    <view class="history-list">
+      <text
+        class="history-item"
+        wx:for="{{ historyList }}"
+        wx:key="*this"
+        bindtap="handleHistoryClick"
+        data-name="{{ item }}"
+      >{{ item }}</text>
+    </view>
+  </view>
+</view>
+  

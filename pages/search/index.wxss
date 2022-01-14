@@ -1,1 +1,68 @@
-/* pages/search/index.wxss */
+page {
+  background: #fff;
+}
+page view.search view.search-header {
+  padding: 20rpx;
+  background: #F8554D;
+  display: flex;
+  align-items: center;
+}
+page view.search view.search-header text.iconfont.icon-fanhui {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 40rpx;
+}
+page view.search view.search-header input {
+  background: #fff;
+  padding: 10rpx;
+  padding-left: 30rpx;
+  flex: 4;
+}
+page view.search view.search-header view.search-btn {
+  flex: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  padding: 15rpx 0;
+}
+page view.search-history {
+  padding: 20rpx;
+}
+page view.search-history view.search-title {
+  height: 50rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+page view.search-history view.history-list {
+  margin-top: 30rpx;
+}
+page view.search-history view.history-list text.history-item {
+  padding: 15rpx 30rpx;
+  border-radius: 50rpx;
+  background: #EDEDED;
+  margin: 0 20rpx 20rpx;
+  font-size: 24rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+  float: left;
+  max-width: 250rpx;
+}
+page .suggeste-list {
+  height: calc(100vh - 100rpx);
+}
+page .suggeste-list .suggeste-item {
+  padding: 20rpx 30rpx;
+  border-bottom: 2rpx solid #eee;
+  font-size: 24rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  word-break: break-all;
+}

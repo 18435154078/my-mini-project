@@ -1,0 +1,5 @@
+<view class="login">
+    <image class="avatar" src="{{ userInfo.avatarUrl }}" mode="" lazy-load="false" binderror="" bindload="" />
+    <text class="nickname" selectable="false" space="false" decode="false">{{ userInfo.nickName }}</text>
+    <button class="button" bindtap="toLogin">确认登录</button>
+</view>

@@ -1,1 +1,110 @@
-/* pages/my/index.wxss */
+.my .my-header .login-info {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom, #F8554D, #fff);
+  padding: 20rpx 40rpx;
+}
+.my .my-header .login-info .avatar {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+.my .my-header .login-info .nickname {
+  margin-left: 20rpx;
+  font-size: 32rpx;
+}
+.my .user-info .record {
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.my .user-info .record .record-item {
+  margin-top: 20rpx;
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.my .user-info .record .record-item .num {
+  color: red;
+  font-size: 32rpx;
+}
+.my .user-info .record .record-item .name {
+  font-size: 30rpx;
+}
+.my .user-info view.my-order {
+  margin-top: 20rpx;
+  background: #fff;
+}
+.my .user-info view.my-order view.my-order-title {
+  padding: 20rpx;
+  font-size: 32rpx;
+  border-bottom: 2rpx solid #eee;
+}
+.my .user-info view.my-order view.my-order-list {
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20rpx;
+}
+.my .user-info view.my-order view.my-order-list view.my-order-item {
+  height: 120rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.my .user-info view.my-order view.my-order-list view.my-order-item text.iconfont {
+  color: #F8554D;
+  font-size: 40rpx;
+}
+.my .user-info view.address {
+  background: #fff;
+  padding: 20rpx 30rpx;
+  margin-top: 20rpx;
+  font-size: 32rpx;
+}
+.my .user-info view.our-msg {
+  background: #fff;
+  margin-top: 20rpx;
+}
+.my .user-info view.our-msg button,
+.my .user-info view.our-msg view,
+.my .user-info view.our-msg navigator {
+  width: unset;
+  font-weight: unset;
+  background: unset;
+  font-size: 32rpx;
+  padding: 20rpx 30rpx;
+  border-bottom: 2rpx solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.my .user-info view.our-msg .about-us {
+  border-bottom: none;
+}
+.my .user-info .recommend-other {
+  width: unset;
+  font-weight: unset;
+  background: unset;
+  font-size: 32rpx;
+  padding: 20rpx 30rpx;
+  border-bottom: 2rpx solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  margin-top: 20rpx;
+}
+.my .user-info .log-out {
+  margin-top: 80rpx;
+  margin-bottom: 40rpx;
+  background: #F8554D;
+  color: #fff;
+  font-weight: unset;
+  font-size: 32rpx;
+}

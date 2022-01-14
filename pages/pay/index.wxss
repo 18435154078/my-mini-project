@@ -1,5 +1,4 @@
 .shopCar {
-  height: calc(100vh - 100rpx);
   background: #fff;
 }
 .shopCar .addAddress {
@@ -7,6 +6,7 @@
 }
 .shopCar .address {
   padding: 20rpx;
+  border-bottom: 2rpx solid pink;
 }
 .shopCar .address .username {
   display: flex;
@@ -16,7 +16,10 @@
 .shopCar .shop-car .shop-car-title {
   padding: 20rpx;
   font-size: 40rpx;
-  border-top: 2rpx solid pink;
+  border-bottom: 2rpx solid pink;
+}
+.shopCar .shop-car .shop-wrap {
+  height: calc(100vh - 305rpx);
 }
 .shopCar .shop-car .shop-wrap .good-item {
   display: flex;
@@ -24,7 +27,7 @@
   background: #fff;
   height: 200rpx;
   padding: 20rpx 40rpx;
-  border-top: 2rpx solid pink;
+  border-bottom: 2rpx solid pink;
 }
 .shopCar .shop-car .shop-wrap .good-item .good-item-checkbox {
   flex: 1;
@@ -33,18 +36,16 @@
   display: flex;
   flex: 6;
 }
-.shopCar .shop-car .shop-wrap .good-item .good-item-detail .good-item-cover {
-  flex: 1;
-}
 .shopCar .shop-car .shop-wrap .good-item .good-item-detail .good-item-cover image {
   width: 160rpx;
   height: 160rpx;
   display: block;
   margin-right: 20rpx;
+  flex: 1;
 }
 .shopCar .shop-car .shop-wrap .good-item .good-item-detail .good-item-text {
-  flex: 2;
   display: flex;
+  flex: 2;
   flex-direction: column;
   justify-content: space-between;
 }
@@ -66,6 +67,7 @@
 .shopCar .shop-car .shop-wrap .good-item .good-item-detail .good-item-text .good-item-price-wrap .good-item-number {
   display: flex;
   align-items: center;
+  color: #666;
 }
 .shopCar .shop-car .shop-wrap .good-item .good-item-detail .good-item-text .good-item-price-wrap .good-item-number button {
   width: 50rpx;
@@ -75,13 +77,13 @@
   line-height: 50rpx;
   padding: 0;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .shopCar .shop-car .shop-wrap .good-item .good-item-detail .good-item-text .good-item-price-wrap .good-item-number input {
-  width: 60rpx;
+  width: 40rpx;
   text-align: center;
-  color: #000;
+  color: #666;
 }
 .shopCar .shop-car .no-goods {
   width: 100%;
@@ -102,13 +104,6 @@
   flex: 3;
   display: flex;
   align-items: center;
-}
-.shopCar .account-wrap .good-item-checkbox text {
-  margin-left: 10rpx;
-}
-.shopCar .account-wrap .good-item-checkbox .total {
-  display: block;
-  margin-left: 30rpx;
 }
 .shopCar .account-wrap .toPay {
   flex: 1;

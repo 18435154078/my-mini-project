@@ -1,66 +1,105 @@
 // pages/search/index.js
+import { request } from '../../utils/request'
+import { showModal } from '../../api/wx_api'
+import lodash from '../../utils/lodash.js'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    searchText: '',
+    suggesteList: [],
+    historyList: [],
+    timer: true
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  onShow() {
+    this.setData({
+      searchText: '',
+      historyList: wx.getStorageSync('historyList') || [],
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  async getsuggesteList() {
+    const { data } = await request({
+      url: '/goods/qsearch',
+      data: {
+        query: this.data.searchText.trim()
+      }
+    })
+    this.setData({
+      suggesteList: data.message
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  handleSearchText(e) {
+    this.setData({
+      searchText: e.detail.value,
+    })
+    // 页面防抖处理
+    clearTimeout(this.data.timer)
+    this.data.timer = setTimeout(() => {
+      this.getsuggesteList()
+    }, 500)
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  back() {
+    wx.navigateBack()
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  handleSearchBtn() {
+    if(!this.data.searchText.trim()) {
+      return
+    }
+    this.saveHistory(this.data.searchText)
+    wx.navigateTo({
+      url: '../good_list/index?query=' + this.data.searchText.trim()
+    }) 
   },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
+  handleSuggeste(e) {
+    const name = e.currentTarget.dataset.name
+    this.saveHistory(name)
+    wx.navigateTo({
+      url: '../good_list/index?query=' + name
+    })
   },
 
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
+  saveHistory(value) {
+    this.data.historyList.unshift(value)
+    this.setData({
+      historyList: this.data.historyList
+    })
+    wx.setStorageSync('historyList', this.data.historyList)
+  },
 
+  handleHistoryClick(e) {
+    const name = e.currentTarget.dataset.name
+    wx.navigateTo({
+      url: '../good_list/index?query=' + name
+    })
+  },
+
+  async clearHistory() {
+    const isClear = await showModal('提示', '是否清空历史记录？')
+    if(isClear.cancel) {
+      return
+    }
+    this.setData({
+      historyList: []
+    })
+    wx.setStorageSync('historyList', [])
+  },
+
+  handleComfirm() {
+    this.handleSearchBtn()
   }
 })

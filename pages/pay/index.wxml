@@ -1,4 +1,4 @@
-<scroll-view class="shopCar" scroll-y wx:if="{{userInfo.isLogin}}">
+<view class="shopCar">
     <view wx:if="{{ address && address.userName }}"  bindtap="handleChooseAddress" class="address">
         <view class="username">
             <text class="" selectable="false" space="true" decode="false">收货人：{{ address.userName }}</text>
@@ -15,12 +15,9 @@
     <view class="shop-car">
         <view class="shop-car-title">
             购物车
-        </view>
-        <view class="shop-wrap" wx:if="{{ shopCarList.length > 0 }}">
+        </view> 
+        <scroll-view class="shop-wrap" scroll-y>
             <view class="good-item" wx:for="{{ shopCarList }}" wx:key="goods_id">
-                <view class="good-item-checkbox">
-                    <checkbox bindtap="handleCheckbox" color="#F8554D" checked="{{ item.select }}" data-index="{{index}}"></checkbox>
-                </view>
                 <navigator class="good-item-detail" hover-class="none" url="{{ '../good_detail/index?id=' + item.goods.goods_id }}">
                     <view class="good-item-cover">
                         <image class="" src="{{ item.goods.goods_big_logo }}" lazy-load="false" binderror="" bindload="" />
@@ -34,22 +31,17 @@
                                 ￥{{ item.goods.goods_price }}
                             </view>
                             <view class="good-item-number">
-                                <button size="mini" catchtap="handleGoodNum" data-symbol="-" data-index="{{ index }}">-</button>
-                                <input value="{{ item.num }}" disabled></input>
-                                <button size="mini" catchtap="handleGoodNum" data-symbol="+" data-index="{{ index }}">+</button>
+                                X<input value="{{ item.num }}" disabled></input>
                             </view>
                         </view>
                     </view>
                 </navigator>
             </view>
-        </view>
-        <image wx:else class="no-goods" src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fquuluu.com%2Fshop%2Fimages%2Fcart-null.png&refer=http%3A%2F%2Fquuluu.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1644466076&t=8508294e733faf7419978083dc2c20d4" mode="widthFix" lazy-load="false" binderror="" bindload="" />
+        </scroll-view>
     </view>
 
     <view class="account-wrap" wx:if="{{ shopCarList.length > 0 }}">
         <view class="good-item-checkbox">
-            <checkbox checked="{{ allChecked }}" color="#F8554D" bindtap="handleAllCheck"></checkbox>
-            <text class="">全选</text>
             <text class="total">合计{{ '￥' + currentAllPrice }}</text>
         </view>
         <view class="toPay" bindtap="handlePay">
@@ -57,6 +49,6 @@
         </view>
     </view>
       
-</scroll-view>
-<button wx:else bindtap="toLogin">未登录</button>
+</view>
+  
   

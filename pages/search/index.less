@@ -1,0 +1,76 @@
+page {
+  background: #fff;
+  view.search {
+    view.search-header {
+      padding: 20rpx;
+      background: #F8554D;
+      display: flex;
+      align-items: center;
+      text.iconfont.icon-fanhui {
+        flex: .5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: 40rpx;
+      }
+      input {
+        // background: #EDEDED;
+        background: #fff;
+        padding: 10rpx;
+        padding-left: 30rpx;
+        flex: 4
+      }
+      view.search-btn {
+        flex: .8;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        padding: 15rpx 0;
+      }
+    }
+  }
+  view.search-history {
+    padding: 20rpx;
+    view.search-title {
+      height: 50rpx;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text {}
+      text.iconfont.icon-shanchu {}
+    }
+    view.history-list {
+      margin-top: 30rpx;
+      // display: flex;
+      // justify-content: space-between;
+      // flex-wrap: wrap;
+      text.history-item {
+        padding: 15rpx 30rpx;
+        border-radius: 50rpx;
+        background: #EDEDED;
+        margin: 0 20rpx 20rpx;
+        font-size: 24rpx;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        word-break: break-all;
+        float: left;
+        max-width: 250rpx;
+      }
+    }
+  }
+  .suggeste-list {
+    height: ~'calc(100vh - 100rpx)';
+    .suggeste-item {
+      padding: 20rpx 30rpx;
+      border-bottom: 2rpx solid #eee;
+      font-size: 24rpx;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      word-break: break-all;
+    }
+  }
+}

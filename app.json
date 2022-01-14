@@ -7,7 +7,11 @@
     "pages/index/index",
     "pages/search/index",
     "pages/good_list/index",
-    "pages/good_detail/index"
+    "pages/good_detail/index",
+    "pages/pay/index",
+    "pages/login/index",
+    "pages/footprints/index",
+    "pages/aboutUs/index"
   ],
   "window":{
     "backgroundTextStyle":"dark",

@@ -1,6 +1,7 @@
 .good-list-wrap {
     .good-list {
         overflow: hidden;
+        min-height: ~'calc(100vh - 185rpx)';
         ::-webkit-scrollbar {
             width:0;
             height:0;
@@ -43,5 +44,22 @@
         height: 80rpx;
         line-height: 80rpx;
         color: #666;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text {
+            animation: loading 1s infinite linear;
+            display: block;
+            margin-right: 10rpx;
+            font-size: 40rpx;
+        }
+        @keyframes loading {
+            from {
+                transform: rotate(0);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
     }
 }

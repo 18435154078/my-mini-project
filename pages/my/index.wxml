@@ -1,2 +1,70 @@
-<!--pages/my/index.wxml-->
-<text>pages/my/index.wxml</text>
+<view class="my">
+  <view class="my-header">
+    <view class="login-info" wx:if="{{ userInfo && userInfo.isLogin }}">
+      <image class="avatar" src="{{ userInfo.userInfo.avatarUrl }}"/>
+      <text class="nickname">{{ userInfo.userInfo.nickName }}</text>
+    </view>
+    <button class="no-login" wx:else bindtap="toLogin">
+      未登录
+      </button>
+  </view>
+  <view class="user-info" wx:if="{{ userInfo && userInfo.isLogin }}">  
+    <view class="record">
+      <view class="record-item">
+        <text class="num">0</text>
+        <text class="name">收藏的店铺</text>
+      </view>
+      <navigator class="record-item" url="../footprints/index?index=2">
+        <text class="num">{{ likes.length }}</text>
+        <text class="name">收藏的商品</text>
+      </navigator>
+      <view class="record-item">
+        <text class="num">0</text>
+        <text class="name">关注的商品</text>
+      </view>
+      <navigator class="record-item" url="../footprints/index?index=4">
+        <text class="num">{{ footprints.length }}</text>
+        <text class="name">我的足迹</text>
+      </navigator>
+      
+    </view>
+    <view class="my-order">
+      <view class="my-order-title">我的订单</view>
+      <view class="my-order-list">
+        <view class="my-order-item">
+          <text class="iconfont icon-quanbudingdan"></text>
+          <text class="">全部订单</text>
+        </view>
+        <view class="my-order-item">
+          <text class="iconfont icon-daifukuan"></text>
+          <text class="">代付款</text>
+        </view>
+        <view class="my-order-item">
+          <text class="iconfont icon-icon3"></text>
+          <text class="">代收货</text>
+        </view>
+        <view class="my-order-item">
+          <text class="iconfont icon-tuikuan"></text>
+          <text class="">退款/退货</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="address">收货地址管理</view>
+    <view class="our-msg">
+      <view class="connect-number">
+        <text class="" selectable="false" space="false" decode="false">联系客服</text>
+        <text class="" selectable="false" space="false" decode="false">400-618-4000</text>
+      </view>
+      <button class="feedback" open-type="feedback">意见反馈</button>
+      <navigator class="about-us" url="../aboutUs/index">关于我们</navigator>
+    </view>
+    
+    <button class="recommend-other" open-type="share" onShareAppMessage="">把应用推荐给其他人</button>
+    
+    <button class="log-out" bindtap="LogOut">
+      注销登录
+    </button>
+  </view>
+</view>
+  

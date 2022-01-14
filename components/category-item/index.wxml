@@ -19,7 +19,7 @@
                         open-type="navigate"
                     >
                         <view class="img-wrap">
-                            <image class="cat_icon" src="{{ item1.cat_icon }}" mode="aspectFit"/>
+                            <image class="cat_icon" lazy-load src="{{ item1.cat_icon }}" mode="aspectFit"/>
                         </view>
                         <text class="cat_name">{{ item1.cat_name }}</text>
                     </navigator>

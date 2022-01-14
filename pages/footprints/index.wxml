@@ -1,0 +1,25 @@
+<view class="footprints">
+    <view class="shop-car">
+        <view class="shop-wrap">
+            <view class="good-item" wx:for="{{ footprints }}" wx:key="goods_id">
+                <navigator class="good-item-detail" hover-class="none" url="{{ '../good_detail/index?id=' + item.goods.goods_id }}">
+                    <view class="good-item-cover">
+                        <image class="" src="{{ item.goods.goods_big_logo }}" lazy-load="false" binderror="" bindload="" />
+                    </view>
+                    <view class="good-item-text">
+                        <view class="good-item-title">
+                            {{ item.goods.goods_name }}
+                        </view>
+                        <view class="good-item-price-wrap">
+                            <view class="good-item-price">
+                                ￥{{ item.goods.goods_price }}
+                            </view>
+                        </view>
+                    </view>
+                </navigator>
+            </view>
+        </view>
+    </view>
+</view>
+  
+  

@@ -1,66 +1,75 @@
 // pages/my/index.js
+import { showModal, getUserProfile } from '../../api/wx_api'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    userInfo: {},
+    footprints: wx.getStorageSync('footprints') || [],
+    likes: wx.getStorageSync('likes') || []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onShow: function (options) {
+    this.getUserInfo()
+    this.getFootprints()
+    this.getLikes()
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  toLogin(e) {
+    wx.getUserProfile({
+      desc: '展示用户信息', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+      success: (res) => {
+        wx.setStorageSync('userInfo', { isLogin: false, userInfo: res.userInfo })
+        wx.setStorageSync('payMsg', { payMsg: res })
+        wx.navigateTo({
+          url: '../login/index'
+        })
+      }
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  getUserInfo() {
+    const userInfo = wx.getStorageSync('userInfo')
+    if(userInfo.isLogin) {
+      this.setData({
+        userInfo
+      })
+    }
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  async LogOut() {
+    const res = await showModal('提示', '是否退出？')
+    if(!res.confirm) {
+      return
+    }
+    wx.setStorageSync('userInfo', {});
+    this.setData({
+      userInfo: {}
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  getFootprints() {
+    this.setData({
+      footprints: wx.getStorageSync('footprints') || []
+    })
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
+  getLikes() {
+    this.setData({
+      likes: wx.getStorageSync('likes') || []
+    })
   },
 
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  onShareAppMessage() {
+    return {
+      title: 'button',
+      imageUrl: 'https://s4.ax1x.com/2022/01/14/716kkR.png',
+      path: 'pages/home/index'
+    }
   }
 })

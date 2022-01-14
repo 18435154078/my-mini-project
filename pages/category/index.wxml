@@ -1,3 +1,5 @@
+<import src="index.skeleton.wxml" />
+<template is="skeleton" wx:if="{{ isLoad }}" />
 <view class="category">
     <!-- 搜索 -->
     <block hidden>
@@ -28,4 +30,4 @@
         </view>
     </view>
 </view>
-  
+

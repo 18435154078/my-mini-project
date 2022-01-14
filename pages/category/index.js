@@ -4,7 +4,8 @@ Page({
     categoryList: [],
     categoryList_left: [],
     current_categoryList: {},
-    current_active: 0
+    current_active: 0,
+    isLoad: true
   },
 
   /**
@@ -34,7 +35,8 @@ Page({
       this.setData({
         categoryList: data.message,
         categoryList_left: cat_level,
-        current_categoryList: data.message[0]
+        current_categoryList: data.message[0],
+        isLoad: false
       })
     }
   },

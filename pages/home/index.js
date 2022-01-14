@@ -20,6 +20,10 @@ Page({
     this.getFloorList()
   },
 
+  onShow() {
+    
+  },
+
   // 获取轮播图
   async getSwiperList() {
     const { data } = await request({

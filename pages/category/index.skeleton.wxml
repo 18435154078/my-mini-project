@@ -1,0 +1,181 @@
+<!--
+此文件为开发者工具生成，生成时间: 2022/1/14 下午5:05:17
+使用方法：
+在 C:\Users\admit\Desktop\微信小程序\my-shop\pages\category\index.wxml 引入模板
+
+```
+<import src="index.skeleton.wxml"/>
+<template is="skeleton" wx-if="{{loading}}" />
+```
+
+在 C:\Users\admit\Desktop\微信小程序\my-shop\pages\category\index.wxss 中引入样式
+```
+@import "./index.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="category">
+      <view is="components/searchBtn/index">
+        <view class="searchBtn-index--search-btn-wrap">
+          <navigator class="searchBtn-index--search-btn sk-transparent sk-text-14-2857-655 sk-text" style="border: none; background-position-x: 50%;">
+            搜索
+          </navigator>
+        </view>
+      </view>
+      <view class="category-content">
+        <view class="category-left-wrap">
+          <scroll-view scroll-y="true" class="category-left">
+            <view class="cat_level-0 active sk-transparent sk-text-14-2857-879 sk-text sk-pseudo sk-pseudo-circle" data-index="0" style="background-position-x: 50%;">
+              大家电
+            </view>
+            <view class="cat_level-0 sk-transparent sk-text-14-2857-575 sk-text" data-index="1" style="background-position-x: 50%;">
+              热门推荐
+            </view>
+            <view class="cat_level-0 sk-transparent sk-text-14-2857-755 sk-text" data-index="2" style="background-position-x: 50%;">
+              海外购
+            </view>
+            <view class="cat_level-0 sk-transparent sk-text-14-2857-532 sk-text" data-index="3" style="background-position-x: 50%;">
+              苏宁房产
+            </view>
+            <view class="cat_level-0 sk-transparent sk-text-14-2857-944 sk-text" data-index="4" style="background-position-x: 50%;">
+              手机相机
+            </view>
+            <view class="cat_level-0 sk-transparent sk-text-14-2857-638 sk-text" data-index="5" style="background-position-x: 50%;">
+              电脑办公
+            </view>
+            <view class="cat_level-0 sk-transparent sk-text-14-2857-722 sk-text" data-index="6" style="background-position-x: 50%;">
+              厨卫电器
+            </view>
+            <view class="cat_level-0 sk-transparent sk-text-14-2857-178 sk-text" data-index="7" style="background-position-x: 50%;">
+              食品酒水
+            </view>
+            <view class="cat_level-0 sk-transparent sk-text-14-2857-443 sk-text" data-index="8" style="background-position-x: 50%;">
+              居家生活
+            </view>
+            <view class="cat_level-0 sk-transparent sk-text-14-2857-204 sk-text" data-index="9" style="background-position-x: 50%;">
+              厨房电器
+            </view>
+            <view class="cat_level-0 sk-transparent sk-text-14-2857-892 sk-text" data-index="10" style="background-position-x: 50%;">
+              生活电器
+            </view>
+          </scroll-view>
+        </view>
+        <view class="category-right-wrap">
+          <view is="components/category-item/index">
+            <view class="index--category-item">
+              <scroll-view scroll-y="true" class="index--category-right">
+                <view class="index--view">
+                  <view class="index--category-right-containt">
+                    <view class="index--category-right-title sk-transparent sk-text-14-2857-242 sk-text">
+                      电视
+                    </view>
+                    <view class="index--category-right-list">
+                      <navigator open-type="navigate">
+                        <view class="index--img-wrap">
+                          <image lazy-load="true" class="index--cat_icon sk-image" mode="aspectFit"></image>
+                        </view>
+                        <text class="index--cat_name sk-transparent sk-text-14-2857-154 sk-text">曲面电视</text>
+                      </navigator>
+                      <navigator open-type="navigate">
+                        <view class="index--img-wrap">
+                          <image lazy-load="true" class="index--cat_icon sk-image" mode="aspectFit"></image>
+                        </view>
+                        <text class="index--cat_name sk-transparent sk-text-14-2857-563 sk-text">海信</text>
+                      </navigator>
+                      <navigator open-type="navigate">
+                        <view class="index--img-wrap">
+                          <image lazy-load="true" class="index--cat_icon sk-image" mode="aspectFit"></image>
+                        </view>
+                        <text class="index--cat_name sk-transparent sk-text-14-2857-761 sk-text">夏普</text>
+                      </navigator>
+                      <navigator open-type="navigate">
+                        <view class="index--img-wrap">
+                          <image lazy-load="true" class="index--cat_icon sk-image" mode="aspectFit"></image>
+                        </view>
+                        <text class="index--cat_name sk-transparent sk-text-14-2857-202 sk-text">创维</text>
+                      </navigator>
+                      <navigator open-type="navigate">
+                        <view class="index--img-wrap">
+                          <image lazy-load="true" class="index--cat_icon sk-image" mode="aspectFit"></image>
+                        </view>
+                        <text class="index--cat_name sk-transparent sk-text-14-2857-704 sk-text">TCL</text>
+                      </navigator>
+                      <navigator open-type="navigate">
+                        <view class="index--img-wrap">
+                          <image lazy-load="true" class="index--cat_icon sk-image" mode="aspectFit"></image>
+                        </view>
+                        <text class="index--cat_name sk-transparent sk-text-14-2857-100 sk-text">PPTV</text>
+                      </navigator>
+                      <navigator open-type="navigate">
+                        <view class="index--img-wrap">
+                          <image lazy-load="true" class="index--cat_icon sk-image" mode="aspectFit"></image>
+                        </view>
+                        <text class="index--cat_name sk-transparent sk-text-14-2857-902 sk-text">小米</text>
+                      </navigator>
+                      <navigator open-type="navigate">
+                        <view class="index--img-wrap">
+                          <image lazy-load="true" class="index--cat_icon sk-image" mode="aspectFit"></image>
+                        </view>
+                        <text class="index--cat_name sk-transparent sk-text-14-2857-199 sk-text">长虹</text>
+                      </navigator>
+                      <navigator open-type="navigate">
+                        <view class="index--img-wrap">
+                          <image lazy-load="true" class="index--cat_icon sk-image" mode="aspectFit"></image>
+                        </view>
+                        <text class="index--cat_name sk-transparent sk-text-14-2857-639 sk-text">康佳</text>
+                      </navigator>
+                      <navigator open-type="navigate">
+                        <view class="index--img-wrap">
+                          <image lazy-load="true" class="index--cat_icon sk-image" mode="aspectFit"></image>
+                        </view>
+                        <text class="index--cat_name sk-transparent sk-text-14-2857-819 sk-text">三星</text>
+                      </navigator>
+                      <navigator open-type="navigate">
+                        <view class="index--img-wrap">
+                          <image lazy-load="true" class="index--cat_icon sk-image" mode="aspectFit"></image>
+                        </view>
+                        <text class="index--cat_name sk-transparent sk-text-14-2857-707 sk-text">飞利浦</text>
+                      </navigator>
+                      <navigator open-type="navigate">
+                        <view class="index--img-wrap">
+                          <image lazy-load="true" class="index--cat_icon sk-image" mode="aspectFit"></image>
+                        </view>
+                        <text class="index--cat_name sk-transparent sk-text-14-2857-372 sk-text">索尼</text>
+                      </navigator>
+                      <navigator open-type="navigate">
+                        <view class="index--img-wrap">
+                          <image lazy-load="true" class="index--cat_icon sk-image" mode="aspectFit"></image>
+                        </view>
+                        <text class="index--cat_name sk-transparent sk-text-14-2857-323 sk-text">先锋</text>
+                      </navigator>
+                      <navigator open-type="navigate">
+                        <view class="index--img-wrap">
+                          <image lazy-load="true" class="index--cat_icon sk-image" mode="aspectFit"></image>
+                        </view>
+                        <text class="index--cat_name sk-transparent sk-text-14-2857-175 sk-text">家庭影院</text>
+                      </navigator>
+                      <navigator open-type="navigate">
+                        <view class="index--img-wrap">
+                          <image lazy-load="true" class="index--cat_icon sk-image" mode="aspectFit"></image>
+                        </view>
+                        <text class="index--cat_name sk-transparent sk-text-14-2857-424 sk-text">音响</text>
+                      </navigator>
+                      <navigator open-type="navigate">
+                        <view class="index--img-wrap">
+                          <image lazy-load="true" class="index--cat_icon sk-image" mode="aspectFit"></image>
+                        </view>
+                      </navigator>
+                    </view>
+                  </view>
+                </view>
+              </scroll-view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

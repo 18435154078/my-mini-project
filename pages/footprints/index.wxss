@@ -1,0 +1,113 @@
+.footprints {
+  background: #fff;
+}
+.footprints .addAddress {
+  border: 2rpx solid #ccc;
+}
+.footprints .address {
+  padding: 20rpx;
+  border-bottom: 2rpx solid pink;
+}
+.footprints .address .username {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footprints .shop-car .shop-car-title {
+  padding: 20rpx;
+  font-size: 40rpx;
+  border-bottom: 2rpx solid pink;
+}
+.footprints .shop-car .shop-wrap .good-item {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  height: 200rpx;
+  padding: 20rpx 40rpx;
+  border-bottom: 2rpx solid pink;
+}
+.footprints .shop-car .shop-wrap .good-item .good-item-checkbox {
+  flex: 1;
+}
+.footprints .shop-car .shop-wrap .good-item .good-item-detail {
+  display: flex;
+  flex: 6;
+}
+.footprints .shop-car .shop-wrap .good-item .good-item-detail .good-item-cover image {
+  width: 160rpx;
+  height: 160rpx;
+  display: block;
+  margin-right: 20rpx;
+  flex: 1;
+}
+.footprints .shop-car .shop-wrap .good-item .good-item-detail .good-item-text {
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.footprints .shop-car .shop-wrap .good-item .good-item-detail .good-item-text .good-item-title {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.footprints .shop-car .shop-wrap .good-item .good-item-detail .good-item-text .good-item-price-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: red;
+}
+.footprints .shop-car .shop-wrap .good-item .good-item-detail .good-item-text .good-item-price-wrap .good-item-number {
+  display: flex;
+  align-items: center;
+  color: #666;
+}
+.footprints .shop-car .shop-wrap .good-item .good-item-detail .good-item-text .good-item-price-wrap .good-item-number button {
+  width: 50rpx;
+  text-align: center;
+  background: #fff;
+  border: 2rpx solid #ccc;
+  line-height: 50rpx;
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footprints .shop-car .shop-wrap .good-item .good-item-detail .good-item-text .good-item-price-wrap .good-item-number input {
+  width: 40rpx;
+  text-align: center;
+  color: #666;
+}
+.footprints .shop-car .no-goods {
+  width: 100%;
+}
+.footprints .account-wrap {
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 40rpx;
+  z-index: 9999;
+  border-top: 2rpx solid #ccc;
+}
+.footprints .account-wrap .good-item-checkbox {
+  flex: 3;
+  display: flex;
+  align-items: center;
+}
+.footprints .account-wrap .toPay {
+  flex: 1;
+  background: #F8554D;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #fff;
+  border-radius: 30rpx;
+  text-align: center;
+}
