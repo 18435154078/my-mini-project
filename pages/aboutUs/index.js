@@ -12,7 +12,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    wx.getUserProfile({
+      desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+      success: (res) => {
+        this.setData({
+          userInfo: res.userInfo,
+          hasUserInfo: true
+        })
+      }
+    })
   },
 
   /**
@@ -94,7 +102,73 @@ Page({
     //   }
     // })
 
-    wx.getUpdateManager()
 
+  // 加密
+    // const userCryptoManager = wx.getUserCryptoManager()
+    // userCryptoManager.getLatestUserKey({
+    //   success: res => {
+    //     let {encryptKey, iv, version, expireTime} = res
+    //     expireTime = 1000000
+    //     // console.log(encryptKey, iv, version, expireTime)
+    //   }
+    // })
+    // wx.getRandomValues({
+    //   length: 6, // 生成 6 个字节长度的随机数,
+    //   success: res => {
+    //     console.log(wx.arrayBufferToBase64(res.randomValues)) // 转换为 base64 字符串后打印
+    //   }
+    // })
+
+  // 路由
+    // wx.reLaunch({
+    //   url: '../home/index'
+    // })
+
+    // wx.exitMiniProgram({
+    //   success() {
+    //     console.log('成功')
+    //   }
+    // })
+
+    // wx.shareVideoMessage({
+    //   videoPath: '../../icon/movie.mp4',
+    //   thumbPath: '../../icon/wode_avtive.png'
+    // })
+
+    // wx.onCopyUrl()
+
+    // wx.getUserProfile({
+    //   desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
+    //   success: (res) => {
+    //     this.setData({
+    //       userInfo: res.userInfo,
+    //       hasUserInfo: true
+    //     })
+    //   }
+    // })
+
+    // wx.login(res => {
+    //   console.log(res)
+    // })
+    // wx.openSetting({
+    //   success: (result) => {
+        
+    //   },
+    //   fail: () => {},
+    //   complete: () => {}
+    // });
+      
+    wx.showNavigationBarLoading({
+      success() {
+
+      }
+    })
+    wx.setNavigationBarTitle({
+      title: '加载中'
+    })
+
+    wx.setNavigationBarColor({
+      frontColor: 'green'
+    })
   }
 })

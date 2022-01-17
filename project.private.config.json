@@ -13,8 +13,8 @@
     "miniprogram": {
       "list": [
         {
-          "name": "我的",
-          "pathName": "pages/my/index",
+          "name": "",
+          "pathName": "pages/aboutUs/index",
           "query": "",
           "scene": null
         }

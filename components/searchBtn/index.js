@@ -14,6 +14,12 @@ Component({
 
   },
 
+  ready() {
+    // const EventChannel = this.getOpenerEventChannel()
+    // // EventChannel.emit('emitLoad', 'load')
+    // console.log(EventChannel)
+  },
+
   /**
    * 组件的方法列表
    */

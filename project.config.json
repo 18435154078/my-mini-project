@@ -47,7 +47,7 @@
     "useCompilerPlugins": false
   },
   "compileType": "miniprogram",
-  "libVersion": "2.21.2",
+  "libVersion": "2.21.3",
   "appid": "wx74a7552006f3417f",
   "projectname": "my-shop",
   "debugOptions": {

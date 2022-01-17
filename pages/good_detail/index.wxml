@@ -47,10 +47,6 @@
         <view class="shop">
             <text class="" selectable="false" space="false" decode="false">立即购买</text>
         </view>
-        <navigator class="" target="" url="" hover-class="navigator-hover" open-type="navigate">
-            
-        </navigator>
-          
     </view>
 </view>
   
